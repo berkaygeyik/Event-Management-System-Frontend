@@ -1,0 +1,27 @@
+.jumbotron {
+    padding-top: 50px !important;
+    padding-bottom: 20px !important;
+}
+
+.titleName {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.date {
+    display: flex !important;
+    flex-direction: row ;
+    opacity: 1;
+}
+.slash {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.organizator {
+    display: flex !important;
+    flex-direction: row ;
+}
+.button {
+    background-color: red ;
+    /* inactive */
+}

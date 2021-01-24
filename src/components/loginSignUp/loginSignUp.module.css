@@ -1,0 +1,39 @@
+.mainbox {
+    width: 50%;
+    box-shadow: 2px 2px 2px lightgray;
+}
+.loginButton {
+    color:red;
+}
+
+.box {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerTop {
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+    margin-bottom: 20px ;
+}
+
+.footerTopBrand {
+    color: white !important;
+    font-weight: normal;
+    font-size: 2em !important;
+    font-family: fantasy;
+    font-style: oblique;
+} 
+
+.footerTopRight {
+    margin: 5px;
+}
+
+.footerBottomHead {
+    color: rgb(240, 140, 60);
+    font-size: 1.5em;
+}

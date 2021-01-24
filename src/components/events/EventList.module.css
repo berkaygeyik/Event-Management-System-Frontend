@@ -1,0 +1,54 @@
+.card {
+    margin-bottom: 5%;
+    box-shadow: 2px 2px 2px lightgray;
+    cursor: pointer;
+}
+
+.cardBody {
+    height: 200px;
+    display: flex !important;
+    flex-direction: column ;
+    justify-content: space-between;
+}
+
+.cardText {
+    
+}
+.flexRow {
+    display: flex !important;
+    flex-direction: row ;
+}
+.location {
+    background-color: rgb(100, 150, 200) !important;
+    font-size: 1em !important;
+    margin-right: 25px;
+} 
+.participantsNum {
+    background-color: rgb(100, 150, 200) !important;
+    font-size: 1em !important;
+}
+
+.rowDashboard {
+    padding-top: 15px;
+    border: 1px solid lightgray;
+    border-radius: 1%;
+    margin-bottom: 40px;
+}
+
+.eventTitle {
+    cursor:pointer ;
+    display: flex !important;
+    justify-content: flex-end ;
+    margin-bottom:0
+}
+
+.cardTitle {
+    font-weight: bold;
+    margin-bottom: 5px !important;
+}
+
+.cardSubtitle {
+    opacity: 0.6;
+    font-size: 1em;
+    margin-bottom: 5px !important;
+}

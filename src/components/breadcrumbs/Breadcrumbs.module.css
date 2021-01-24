@@ -1,0 +1,17 @@
+/* .breadcrumbItem a:hover, .breadcrumbItem:visited, .breadcrumbItem:link, .breadcrumbItem:active
+{
+    text-decoration: none !important;
+} */
+
+.breadcrumb {
+    margin-top: 90px;
+    margin-bottom: 0;
+}
+
+a{
+    color: black !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+}

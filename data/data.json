@@ -1,0 +1,526 @@
+{
+    "events": [
+      {
+        "id": 1,
+        "categoryId": 1,
+        "name": "Kör Nokta S1E2 | Sahte Siteler",
+        "organizator": "MDISEC Cyber Security Community",
+        "date": {
+          "start": "12 August 2020 - 20:00",
+          "end": "12 August 2020 - 22:00"
+        },
+        "image": "",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus, lectus consequat interdum faucibus, justo ipsum tincidunt risus, in pretium lectus lorem non elit. Etiam nec neque at sem luctus molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam metus mi, dictum nec lacus id, pellentesque ornare ante. Nam sodales mattis eros, elementum ornare est maximus et. Aenean eget tortor risus. Phasellus vehicula vitae nulla ac convallis. Aenean et dapibus nunc. Curabitur id est ut nunc ullamcorper semper a vel eros. Aliquam a sapien tempor justo posuere blandit malesuada maximus tortor. Maecenas vel pellentesque nisi. Maecenas eget ex a tortor mattis dignissim a quis sem. Nulla est magna, pellentesque in ultricies et, mattis in nibh. Integer lacinia dui et tincidunt pharetra.",
+        "location": "online",
+        "participants": [],
+        "numberOfParticipants": 25,
+        "limitOfParticipants": 60,
+        "advertisement": true
+      },
+      {
+        "id": 2,
+        "categoryId": 1,
+        "name": "Piri Reis Üniversitesi Tanıtım Yayını",
+        "organizator": "Piri Reis Üniversitesi",
+        "date": {
+          "start": "12 August 2020 - 20:00",
+          "end": "13 August 2020 - 00:00"
+        },
+        "image": "https://media.kommunity.com/communities/google-dsc-piri-reis-universitesi/events/piri-reis-universitesi-tanitim-yayini-e19c9bb0/20252/tantim-guncel-thumb.jpg",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus, lectus consequat interdum faucibus, justo ipsum tincidunt risus, in pretium lectus lorem non elit. Etiam nec neque at sem luctus molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam metus mi, dictum nec lacus id, pellentesque ornare ante. Nam sodales mattis eros, elementum ornare est maximus et. Aenean eget tortor risus. Phasellus vehicula vitae nulla ac convallis. Aenean et dapibus nunc. Curabitur id est ut nunc ullamcorper semper a vel eros. Aliquam a sapien tempor justo posuere blandit malesuada maximus tortor. Maecenas vel pellentesque nisi. Maecenas eget ex a tortor mattis dignissim a quis sem. Nulla est magna, pellentesque in ultricies et, mattis in nibh. Integer lacinia dui et tincidunt pharetra.",
+        "location": "online",
+        "participants": [],
+        "numberOfParticipants": 15,
+        "limitOfParticipants": 20,
+        "advertisement": false
+      },
+      {
+        "id": 3,
+        "categoryId": 1,
+        "name": "Getting Started with gRPC Web & Blazor",
+        "organizator": "Microsoft Learn Student Ambassadors Türkiye",
+        "date": {
+          "start": "12 August 2020 - 20:00",
+          "end": "12 August 2020 - 23:00"
+        },
+        "image": "https://media.kommunity.com/communities/microsoft-learn-student-ambassadors-turkey/events/getting-started-with-grpc-web-blazor-1d73ee7c/20247/getting-started-with-grpc-web-blazor.jpg",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus, lectus consequat interdum faucibus, justo ipsum tincidunt risus, in pretium lectus lorem non elit. Etiam nec neque at sem luctus molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam metus mi, dictum nec lacus id, pellentesque ornare ante. Nam sodales mattis eros, elementum ornare est maximus et. Aenean eget tortor risus. Phasellus vehicula vitae nulla ac convallis. Aenean et dapibus nunc. Curabitur id est ut nunc ullamcorper semper a vel eros. Aliquam a sapien tempor justo posuere blandit malesuada maximus tortor. Maecenas vel pellentesque nisi. Maecenas eget ex a tortor mattis dignissim a quis sem. Nulla est magna, pellentesque in ultricies et, mattis in nibh. Integer lacinia dui et tincidunt pharetra.",
+        "location": "online",
+        "participants": [],
+        "numberOfParticipants": 29,
+        "limitOfParticipants": "unlimited",
+        "advertisement": false
+      },
+      {
+        "id": 4,
+        "categoryId": 2,
+        "name": "TestXperience Talks: Yuksel Berk Yavuz - Mobile Game Testing",
+        "organizator": "TestXperience Talks",
+        "date": {
+          "start": "15 August 2020 - 12:00",
+          "end": "17 August 2020 - 20:00"
+        },
+        "image": "https://media.kommunity.com/communities/testxperience-talks/events/testxperience-talks-yuksel-berk-yavuz-mobile-game-testing-cc866a5a/20254/berk-afis.png",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus, lectus consequat interdum faucibus, justo ipsum tincidunt risus, in pretium lectus lorem non elit. Etiam nec neque at sem luctus molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam metus mi, dictum nec lacus id, pellentesque ornare ante. Nam sodales mattis eros, elementum ornare est maximus et. Aenean eget tortor risus. Phasellus vehicula vitae nulla ac convallis. Aenean et dapibus nunc. Curabitur id est ut nunc ullamcorper semper a vel eros. Aliquam a sapien tempor justo posuere blandit malesuada maximus tortor. Maecenas vel pellentesque nisi. Maecenas eget ex a tortor mattis dignissim a quis sem. Nulla est magna, pellentesque in ultricies et, mattis in nibh. Integer lacinia dui et tincidunt pharetra.",
+        "location": "online",
+        "participants": [],
+        "numberOfParticipants": 9,
+        "limitOfParticipants": 100,
+        "advertisement": false
+      },
+      {
+        "id": 5,
+        "categoryId": 2,
+        "name": "Trendyol Tech Q&A",
+        "organizator": "Trendyol Tech Meetup",
+        "date": {
+          "start": "22 January 2020 - 19:00",
+          "end": "22 January 2020 - 22:00"
+        },
+        "image": "https://media.kommunity.com/communities/trendyol/events/trendyol-tech-qa-b64d4370/21500/1920x1080v2.jpg",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus, lectus consequat interdum faucibus, justo ipsum tincidunt risus, in pretium lectus lorem non elit. Etiam nec neque at sem luctus molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam metus mi, dictum nec lacus id, pellentesque ornare ante. Nam sodales mattis eros, elementum ornare est maximus et. Aenean eget tortor risus. Phasellus vehicula vitae nulla ac convallis. Aenean et dapibus nunc. Curabitur id est ut nunc ullamcorper semper a vel eros. Aliquam a sapien tempor justo posuere blandit malesuada maximus tortor. Maecenas vel pellentesque nisi. Maecenas eget ex a tortor mattis dignissim a quis sem. Nulla est magna, pellentesque in ultricies et, mattis in nibh. Integer lacinia dui et tincidunt pharetra.",
+        "location": "online",
+        "participants": [],
+        "numberOfParticipants": 25,
+        "limitOfParticipants": "unlimited",
+        "advertisement": true
+      },
+      {
+        "id": 6,
+        "categoryId": 1,
+        "name": "UI/UX Tasarım Araçları",
+        "organizator": "BilgeAdam Teknoloji",
+        "date": {
+          "start": "12 August 2020 - 20:00",
+          "end": "13 August 2020 - 00:00"
+        },
+        "image": "https://media.kommunity.com/communities/bilge-adam-teknoloji/events/uiux-tasarim-araclari-50b2a7cb/21390/ui-design.jpg",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus, lectus consequat interdum faucibus, justo ipsum tincidunt risus, in pretium lectus lorem non elit. Etiam nec neque at sem luctus molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam metus mi, dictum nec lacus id, pellentesque ornare ante. Nam sodales mattis eros, elementum ornare est maximus et. Aenean eget tortor risus. Phasellus vehicula vitae nulla ac convallis. Aenean et dapibus nunc. Curabitur id est ut nunc ullamcorper semper a vel eros. Aliquam a sapien tempor justo posuere blandit malesuada maximus tortor. Maecenas vel pellentesque nisi. Maecenas eget ex a tortor mattis dignissim a quis sem. Nulla est magna, pellentesque in ultricies et, mattis in nibh. Integer lacinia dui et tincidunt pharetra.",
+        "location": "online",
+        "participants": [],
+        "numberOfParticipants": 15,
+        "limitOfParticipants": 25,
+        "advertisement": true
+      },
+      {
+        "id": 7,
+        "categoryId": 1,
+        "name": "3ds Max ile 3D Oyun İçi Ürün Modelleme",
+        "organizator": "BilgeAdam Teknoloji",
+        "date": {
+          "start": "12 August 2020 - 20:00",
+          "end": "12 August 2020 - 23:00"
+        },
+        "image": "https://media.kommunity.com/communities/bilge-adam-teknoloji/events/3ds-max-ile-3d-oyun-ici-urun-modelleme-dd5fa524/21375/kuyu.png",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus, lectus consequat interdum faucibus, justo ipsum tincidunt risus, in pretium lectus lorem non elit. Etiam nec neque at sem luctus molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam metus mi, dictum nec lacus id, pellentesque ornare ante. Nam sodales mattis eros, elementum ornare est maximus et. Aenean eget tortor risus. Phasellus vehicula vitae nulla ac convallis. Aenean et dapibus nunc. Curabitur id est ut nunc ullamcorper semper a vel eros. Aliquam a sapien tempor justo posuere blandit malesuada maximus tortor. Maecenas vel pellentesque nisi. Maecenas eget ex a tortor mattis dignissim a quis sem. Nulla est magna, pellentesque in ultricies et, mattis in nibh. Integer lacinia dui et tincidunt pharetra.",
+        "location": "online",
+        "participants": [],
+        "numberOfParticipants": 29,
+        "limitOfParticipants": "unlimited",
+        "advertisement": false
+      },
+      {
+        "id": 8,
+        "categoryId": 2,
+        "name": "Logitech'in Yeni Nesil Video Konferans Bar'ları ile Tanışın!",
+        "organizator": "ÇözümPark Bilişim Portalı",
+        "date": {
+          "start": "15 August 2020 - 12:00",
+          "end": "17 August 2020 - 20:00"
+        },
+        "image": "https://media.kommunity.com/communities/cozumpark/events/logitechin-yeni-nesil-video-konferans-barlari-ile-tanisin-3e1717c6/21485/logitech-cozumpark1.jpg",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus, lectus consequat interdum faucibus, justo ipsum tincidunt risus, in pretium lectus lorem non elit. Etiam nec neque at sem luctus molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam metus mi, dictum nec lacus id, pellentesque ornare ante. Nam sodales mattis eros, elementum ornare est maximus et. Aenean eget tortor risus. Phasellus vehicula vitae nulla ac convallis. Aenean et dapibus nunc. Curabitur id est ut nunc ullamcorper semper a vel eros. Aliquam a sapien tempor justo posuere blandit malesuada maximus tortor. Maecenas vel pellentesque nisi. Maecenas eget ex a tortor mattis dignissim a quis sem. Nulla est magna, pellentesque in ultricies et, mattis in nibh. Integer lacinia dui et tincidunt pharetra.",
+        "location": "online",
+        "participants": [],
+        "numberOfParticipants": 9,
+        "limitOfParticipants": 85,
+        "advertisement": false
+      },
+      {
+        "id": 9,
+        "categoryId": 3,
+        "name": "Uçmak “Hezarfen Ahmed Çelebi“",
+        "organizator": "Özel Tiyatro",
+        "date": {
+          "start": "12 August 2020 - 20:00",
+          "end": "12 August 2020 - 22:00"
+        },
+        "image": "https://www.yenibiretkinlik.com/files/uploads/rt1037.jpg",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus, lectus consequat interdum faucibus, justo ipsum tincidunt risus, in pretium lectus lorem non elit. Etiam nec neque at sem luctus molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam metus mi, dictum nec lacus id, pellentesque ornare ante. Nam sodales mattis eros, elementum ornare est maximus et. Aenean eget tortor risus. Phasellus vehicula vitae nulla ac convallis. Aenean et dapibus nunc. Curabitur id est ut nunc ullamcorper semper a vel eros. Aliquam a sapien tempor justo posuere blandit malesuada maximus tortor. Maecenas vel pellentesque nisi. Maecenas eget ex a tortor mattis dignissim a quis sem. Nulla est magna, pellentesque in ultricies et, mattis in nibh. Integer lacinia dui et tincidunt pharetra.",
+        "location": "Mecidiyeköy",
+        "participants": [],
+        "numberOfParticipants": 25,
+        "limitOfParticipants": 25,
+        "advertisement": true
+      },
+      {
+        "id": 10,
+        "categoryId": 3,
+        "name": "Esaretin Bedeli Tiyatro",
+        "organizator": "Özel Tiyatro",
+        "date": {
+          "start": "12 August 2020 - 20:00",
+          "end": "13 August 2020 - 00:00"
+        },
+        "image": "https://www.yenibiretkinlik.com/files/uploads/as4166.png",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus, lectus consequat interdum faucibus, justo ipsum tincidunt risus, in pretium lectus lorem non elit. Etiam nec neque at sem luctus molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam metus mi, dictum nec lacus id, pellentesque ornare ante. Nam sodales mattis eros, elementum ornare est maximus et. Aenean eget tortor risus. Phasellus vehicula vitae nulla ac convallis. Aenean et dapibus nunc. Curabitur id est ut nunc ullamcorper semper a vel eros. Aliquam a sapien tempor justo posuere blandit malesuada maximus tortor. Maecenas vel pellentesque nisi. Maecenas eget ex a tortor mattis dignissim a quis sem. Nulla est magna, pellentesque in ultricies et, mattis in nibh. Integer lacinia dui et tincidunt pharetra.",
+        "location": "Zorlu PSM",
+        "participants": [],
+        "numberOfParticipants": 15,
+        "limitOfParticipants": "unlimited",
+        "advertisement": true
+      },
+      {
+        "id": 11,
+        "categoryId": 3,
+        "name": "İnsan Çağı",
+        "organizator": "Özel Tiyatro",
+        "date": {
+          "start": "12 August 2020 - 20:00",
+          "end": "12 August 2020 - 23:00"
+        },
+        "image": "https://www.yenibiretkinlik.com/files/uploads/as691.jpg",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus, lectus consequat interdum faucibus, justo ipsum tincidunt risus, in pretium lectus lorem non elit. Etiam nec neque at sem luctus molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam metus mi, dictum nec lacus id, pellentesque ornare ante. Nam sodales mattis eros, elementum ornare est maximus et. Aenean eget tortor risus. Phasellus vehicula vitae nulla ac convallis. Aenean et dapibus nunc. Curabitur id est ut nunc ullamcorper semper a vel eros. Aliquam a sapien tempor justo posuere blandit malesuada maximus tortor. Maecenas vel pellentesque nisi. Maecenas eget ex a tortor mattis dignissim a quis sem. Nulla est magna, pellentesque in ultricies et, mattis in nibh. Integer lacinia dui et tincidunt pharetra.",
+        "location": "Tatavla Sahne",
+        "participants": [],
+        "numberOfParticipants": 29,
+        "limitOfParticipants": "unlimited",
+        "advertisement": false
+      },
+      {
+        "id": 12,
+        "categoryId": 1,
+        "name": "TestXperience Talks: Yuksel Berk Yavuz - Mobile Game Testing",
+        "organizator": "TestXperience Talks",
+        "date": {
+          "start": "15 August 2020 - 12:00",
+          "end": "17 August 2020 - 20:00"
+        },
+        "image": "https://media.kommunity.com/communities/testxperience-talks/events/testxperience-talks-yuksel-berk-yavuz-mobile-game-testing-cc866a5a/20254/berk-afis.png",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus, lectus consequat interdum faucibus, justo ipsum tincidunt risus, in pretium lectus lorem non elit. Etiam nec neque at sem luctus molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam metus mi, dictum nec lacus id, pellentesque ornare ante. Nam sodales mattis eros, elementum ornare est maximus et. Aenean eget tortor risus. Phasellus vehicula vitae nulla ac convallis. Aenean et dapibus nunc. Curabitur id est ut nunc ullamcorper semper a vel eros. Aliquam a sapien tempor justo posuere blandit malesuada maximus tortor. Maecenas vel pellentesque nisi. Maecenas eget ex a tortor mattis dignissim a quis sem. Nulla est magna, pellentesque in ultricies et, mattis in nibh. Integer lacinia dui et tincidunt pharetra.",
+        "location": "online",
+        "participants": [],
+        "numberOfParticipants": 9,
+        "limitOfParticipants": 50,
+        "advertisement": false
+      }
+    ],
+
+
+
+    "categories": [
+      {
+        "id": 1,
+        "categoryName": "Education",
+        "seoUrl": "education"
+      },
+      {
+        "id": 2,
+        "categoryName": "Business Life",
+        "seoUrl": "business-life"
+      },
+      {
+        "id": 3,
+        "categoryName": "Entertainment",
+        "seoUrl": "entertainment"
+      },
+      {
+        "id": 4,
+        "categoryName": "Health",
+        "seoUrl": "health"
+      },
+      {
+        "id": 5,
+        "categoryName": "Art",
+        "seoUrl": "art"
+      },
+      {
+        "id": 6,
+        "categoryName": "Discover",
+        "seoUrl": "discover"
+      },
+      {
+        "id": 7,
+        "categoryName": "Other",
+        "seoUrl": "other"
+      }
+    ],
+
+
+
+
+
+
+
+    "participants": [
+      {
+        "id": 1,
+        "firstName": "Gökhan",
+        "lastName": "Özeloğlu",
+        "email":  "gozeloglu@gmail.com",
+        "userName": "gozeloglu",
+        "password": "12345678915",
+        "age": 22,
+        "identityNumber": "13579246801"
+      },
+      {
+        "id": 2,
+        "firstName": "Berkay",
+        "lastName": "Geyik",
+        "email":  "bgeyik@gmail.com",
+        "userName": "berkay",
+        "password": "12345678915",
+        "age": 22,
+        "identityNumber": "12345678910"
+      },
+      {
+        "id": 3,
+        "firstName": "Yusuf",
+        "lastName": "Keten",
+        "email":  "yketen@gmail.com",
+        "userName": "yusuf",
+        "password": "12345678915",
+        "age": 22,
+        "identityNumber": "12345678911"
+      },
+      {
+        "id": 4,
+        "firstName": "Selçuk",
+        "lastName": "İnan",
+        "email":  "sinan@gmail.com",
+        "userName": "selcuk",
+        "password": "12345678915",
+        "age": 22,
+        "identityNumber": "12345678912"
+      },
+      {
+        "id": 5,
+        "firstName": "Burak",
+        "lastName": "Yılmaz",
+        "email":  "burak@gmail.com",
+        "userName": "burak",
+        "password": "12345678915",
+        "age": 22,
+        "identityNumber": "12345678913"
+      },
+      {
+        "id": 6,
+        "firstName": "Gökhan2",
+        "lastName": "Özeloğlu",
+        "email":  "gozeloglu2@gmail.com",
+        "userName": "gozeloglu2",
+        "password": "12345678915",
+        "age": 22,
+        "identityNumber": "13579246802"
+      },
+      {
+        "id": 7,
+        "firstName": "Berkay2",
+        "lastName": "Geyik",
+        "email":  "bgeyik2@gmail.com",
+        "userName": "berkay",
+        "password": "12345678915",
+        "age": 22,
+        "identityNumber": "12345678920"
+      },
+      {
+        "id": 8,
+        "firstName": "Yusuf2",
+        "lastName": "Keten",
+        "email":  "yketen2@gmail.com",
+        "userName": "yusuf2",
+        "password": "12345678915",
+        "age": 22,
+        "identityNumber": "12345678921"
+      },
+      {
+        "id": 9,
+        "firstName": "Selçuk2",
+        "lastName": "İnan",
+        "email":  "sinan2@gmail.com",
+        "userName": "selcuk2",
+        "password": "12345678915",
+        "age": 22,
+        "identityNumber": "12345678922"
+      },
+      {
+        "id": 10,
+        "firstName": "Burak2",
+        "lastName": "Yılmaz",
+        "email":  "burak2@gmail.com",
+        "userName": "burak2",
+        "password": "12345678915",
+        "age": 22,
+        "identityNumber": "12345678923"
+      },
+      {
+        
+        "id": 11,
+        "firstName": "Gökhan3",
+        "lastName": "Özeloğlu",
+        "email":  "gozeloglu3@gmail.com",
+        "userName": "gozeloglu3",
+        "password": "12345678915",
+        "age": 22,
+        "identityNumber": "13579246803"
+      },
+      {
+        "id": 12,
+        "firstName": "Berkay3",
+        "lastName": "Geyik",
+        "email":  "bgeyik3@gmail.com",
+        "userName": "berkay3",
+        "password": "12345678915",
+        "age": 22,
+        "identityNumber": "12345678930"
+      },
+      {
+        "id": 13,
+        "firstName": "Yusuf3",
+        "lastName": "Keten",
+        "email":  "yketen3@gmail.com",
+        "userName": "yusuf3",
+        "password": "12345678915",
+        "age": 22,
+        "identityNumber": "12345678931"
+      },
+      {
+        "id": 14,
+        "firstName": "Selçuk3",
+        "lastName": "İnan",
+        "email":  "sinan3@gmail.com",
+        "userName": "selcuk3",
+        "password": "12345678915",
+        "age": 22,
+        "identityNumber": "12345678932"
+      },
+      {
+        "id": 15,
+        "firstName": "Burak3",
+        "lastName": "Yılmaz",
+        "email":  "burak3@gmail.com",
+        "userName": "burak3",
+        "password": "12345678915",
+        "age": 22,
+        "identityNumber": "12345678933"
+      },
+      {
+        "id": 16,
+        "firstName": "Gökhan4",
+        "lastName": "Özeloğlu",
+        "email":  "gozeloglu4@gmail.com",
+        "userName": "gozeloglu4",
+        "password": "12345678915",
+        "age": 22,
+        "identityNumber": "13579246804"
+      },
+      {
+        "id": 17,
+        "firstName": "Berkay4",
+        "lastName": "Geyik",
+        "email":  "bgeyik4@gmail.com",
+        "userName": "berkay4",
+        "password": "12345678915",
+        "age": 22,
+        "identityNumber": "12345678940"
+      },
+      {
+        "id": 18,
+        "firstName": "Yusuf4",
+        "lastName": "Keten",
+        "email":  "yketen4@gmail.com",
+        "userName": "yusuf4",
+        "password": "12345678915",
+        "age": 22,
+        "identityNumber": "12345678941"
+      },
+      {
+        "id": 19,
+        "firstName": "Selçuk4",
+        "lastName": "İnan",
+        "email":  "sinan4@gmail.com",
+        "userName": "selcuk4",
+        "password": "12345678915",
+        "age": 22,
+        "identityNumber": "12345678942"
+      },
+      {
+        "id": 20,
+        "firstName": "Burak4",
+        "lastName": "Yılmaz",
+        "email":  "burak4@gmail.com",
+        "userName": "burak4",
+        "password": "12345678915",
+        "age": 22,
+        "identityNumber": "12345678943"
+      }
+    ],
+
+    "registeredEvents": [
+      {
+        "participantId": 1,
+        "events":[
+          {
+            "id": 1,
+            "categoryId": 1,
+            "name": "Kör Nokta S1E2 | Sahte Siteler",
+            "organizator": "MDISEC Cyber Security Community",
+            "date": {
+              "start": "12 August 2020 - 20:00",
+              "end": "12 August 2020 - 22:00"
+            },
+            "image": "",
+            "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus, lectus consequat interdum faucibus, justo ipsum tincidunt risus, in pretium lectus lorem non elit. Etiam nec neque at sem luctus molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam metus mi, dictum nec lacus id, pellentesque ornare ante. Nam sodales mattis eros, elementum ornare est maximus et. Aenean eget tortor risus. Phasellus vehicula vitae nulla ac convallis. Aenean et dapibus nunc. Curabitur id est ut nunc ullamcorper semper a vel eros. Aliquam a sapien tempor justo posuere blandit malesuada maximus tortor. Maecenas vel pellentesque nisi. Maecenas eget ex a tortor mattis dignissim a quis sem. Nulla est magna, pellentesque in ultricies et, mattis in nibh. Integer lacinia dui et tincidunt pharetra.",
+            "location": "online",
+            "participants": [],
+            "numberOfParticipants": 25,
+            "limitOfParticipants": 60,
+            "advertisement": true
+          },
+          {
+            "id": 2,
+            "categoryId": 1,
+            "name": "Piri Reis Üniversitesi Tanıtım Yayını",
+            "organizator": "Piri Reis Üniversitesi",
+            "date": {
+              "start": "12 August 2020 - 20:00",
+              "end": "13 August 2020 - 00:00"
+            },
+            "image": "https://media.kommunity.com/communities/google-dsc-piri-reis-universitesi/events/piri-reis-universitesi-tanitim-yayini-e19c9bb0/20252/tantim-guncel-thumb.jpg",
+            "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus, lectus consequat interdum faucibus, justo ipsum tincidunt risus, in pretium lectus lorem non elit. Etiam nec neque at sem luctus molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam metus mi, dictum nec lacus id, pellentesque ornare ante. Nam sodales mattis eros, elementum ornare est maximus et. Aenean eget tortor risus. Phasellus vehicula vitae nulla ac convallis. Aenean et dapibus nunc. Curabitur id est ut nunc ullamcorper semper a vel eros. Aliquam a sapien tempor justo posuere blandit malesuada maximus tortor. Maecenas vel pellentesque nisi. Maecenas eget ex a tortor mattis dignissim a quis sem. Nulla est magna, pellentesque in ultricies et, mattis in nibh. Integer lacinia dui et tincidunt pharetra.",
+            "location": "online",
+            "participants": [],
+            "numberOfParticipants": 15,
+            "limitOfParticipants": 20,
+            "advertisement": false
+          }
+        ]
+      },
+      {
+        "participantId": 2,
+        "events":[
+          
+        ]
+      },
+      {
+        "participantId": 3,
+        "events":[
+          
+        ]
+      },
+      {
+        "participantId": 4,
+        "events":[
+          
+        ]
+      },
+      {
+        "participantId": 5,
+        "events":[
+          
+        ]
+      }
+      
+      
+    ]
+  }

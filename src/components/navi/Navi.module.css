@@ -1,0 +1,64 @@
+.completeOfBar {
+    background-color: rgb(100, 150, 200);
+    box-shadow: 0 5px 10px gray;
+    margin-bottom: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 20
+}
+
+.navbar {
+   
+   
+}
+
+.navbarBrand {
+    color: white !important;
+    font-weight: normal;
+    font-size: 2em !important;
+    font-family: fantasy;
+    font-style: oblique;
+}
+
+.button {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    width: 100px;
+    /* background-color: rgb(255, 180, 100) !important; */
+}
+
+
+
+.dropdownItem:hover {
+    
+}
+
+.dropdownItem:active {
+    background-color: rgb(240, 140, 60) !important;
+}
+
+.dropdownToggle {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* .dropdownToggle button:focus {
+    background-color: red !important;
+    border: none;
+    box-shadow: none;
+} */
+
+.dropdownToggle button {
+    width: 120px !important;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .button {
+        width: 99%;
+        margin-top: 10px;
+    }
+    .dropdownToggle button {
+        width: 99% !important;
+    }
+}
