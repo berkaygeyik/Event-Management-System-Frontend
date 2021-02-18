@@ -39,4 +39,3 @@ You will also see any lint errors in the console.
 ![9](https://user-images.githubusercontent.com/61477332/108418082-ce07f200-7241-11eb-81c1-c69dd8bdcadb.png)
 ![10](https://user-images.githubusercontent.com/61477332/108418083-ce07f200-7241-11eb-8970-cd2ab1266f9a.png)
 ![11](https://user-images.githubusercontent.com/61477332/108418084-cea08880-7241-11eb-8692-373ab4d11560.png)
-![12](https://user-images.githubusercontent.com/61477332/108418085-cea08880-7241-11eb-85c6-a2ecf4f2be24.png)
