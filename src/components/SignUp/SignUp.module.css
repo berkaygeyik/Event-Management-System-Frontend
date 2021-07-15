@@ -1,0 +1,94 @@
+.mainbox {
+    width: 60%;
+  }
+  .loginButton {
+    color: red;
+  }
+  
+  .box {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--myWhite);
+    padding: 2rem;
+    box-shadow: 4px 4px 4px gray;
+    margin-top: 60px;
+  }
+  .myForm {
+      width: 80%;
+  }
+  
+  .cardImage {
+    width: 50px;
+  }
+  
+  .hr {
+    width: 90%;
+  }
+  
+  .inputContainer {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .inputGroup {
+      display: flex;
+      flex-direction: row;
+  }
+  
+  .icon {
+      padding:8px;
+      min-width: 50px;
+      padding: 0;
+  }
+  
+  .button {
+      margin-right: 20px !important;
+      font-size: 1.17rem;
+      width: 100%;
+      color: white !important;
+      background-color: var(--myGreen) !important;
+    }
+    
+    .button:hover {
+        background-color: var(--myGreenHover) !important;
+    }
+    
+  
+  
+  /* .footerTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .footerTopBrand {
+    color: white !important;
+    font-weight: normal;
+    font-size: 2em !important;
+    font-family: fantasy;
+    font-style: oblique;
+  }
+  
+  .footerTopRight {
+    margin: 5px;
+  }
+  
+  .footerBottomHead {
+    color: rgb(240, 140, 60);
+    font-size: 1.5em;
+  } */
+  

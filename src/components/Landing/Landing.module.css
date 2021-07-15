@@ -1,0 +1,41 @@
+.landingHeader {
+  background-size: cover;
+  color: white;
+  display: flex;
+  min-height: 100vh;
+}
+
+.textButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--myDarkBlue);
+  background-color: rgba(239, 233, 210, 0.90);
+  margin: 200px 100px;
+  padding: 0 50px;
+  border-radius: 60px;
+}
+
+.title1 {
+  font-weight: bolder;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.title2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.button {
+  margin-right: 20px !important;
+  font-size: 1.17rem;
+  width: 150px;
+  height: 50px;
+  color: white !important;
+  
+}
+
+.button:hover {
+    background-color: var(--myGreenHover) !important;
+}
+
+

@@ -1,0 +1,26 @@
+/* :root {
+  --myDarkBlue: #0b3954;
+  --myBlue: #bfd7ea;
+  --myRed: #ff6663;
+  --myYellow: #e0ff4f;
+  --myWhite: #fefffe;
+} */
+
+/* :root {
+  --myDarkBlue: #080708;
+  --myBlue: #3772ff;
+  --myRed: #df2935;
+  --myYellow: #fdca40;
+  --myWhite: #e6e8e6;
+} */
+
+:root {
+  --myDarkBlue: #484d6d;
+  --myBlue: #08b2e3;
+  --myRed: #ee6352;
+  --myGreen: #57a773;
+  --myYellow: #fdca40;
+  --myWhite: #efe9f4;
+
+  --myGreenHover: #408554;
+}

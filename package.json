@@ -4,6 +4,9 @@
   "private": true,
   "proxy": "http://localhost:8080",
   "dependencies": {
+    "@material-ui/core": "^4.12.1",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "@popperjs/core": "^2.9.2",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -11,11 +14,13 @@
     "bootstrap": "^5.0.2",
     "cors": "^2.8.5",
     "react": "^17.0.2",
+    "react-bootstrap": "^1.6.1",
     "react-bootstrap4-form-validation": "^1.0.10",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "reactstrap": "^8.9.0",
     "redux": "^4.1.0",
     "web-vitals": "^1.1.2"
   },

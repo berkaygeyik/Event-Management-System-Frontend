@@ -1,60 +1,67 @@
-
-import React, {Component} from "react";
+import React, { Component, useState, useEffect } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Home from "./components/Home";
-import Navbar from "./components/Navbar";
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import axios from "axios";
 import Forgot from "./components/Forgot";
+import LandingPage from "./components/Root/LandingPage";
+import HomePage from "./components/Root/HomePage";
+import AdminPage from "./components/Root/AdminPage";
+import LoginPage from "./components/Root/LoginPage";
+import SignUpPage from "./components/Root/SignUpPage";
+import Navbar2 from "./components/Common/Navbar";
+import styles from "./App.module.css";
+import Profile from "./components/Root/Profile";
+function App() {
+  const [user, setUser] = useState("");
+  const [userRole, setUserRole] = useState("");
+  const [trigger, setTrigger] = useState("");
 
-export default class App extends Component {
-  state = {};
-
-  componentDidMount = () => {
-    
-    // This is spesific config code
-    // Now, in index.js, Configuring using axios.defaults.headers.common
+  useEffect(() => {
     const config = {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
       },
     };
-    console.log(config)
-    console.log("test1")
+    setUser(localStorage.getItem("username"));
+    if (user) {
+      axios
+        .get(`/user/profile/${user}`, config)
+        .then((res) => {
+          setUserRole(res.data.userRole)
+          localStorage.setItem("userRole", res.data.userRole)
+        })
+        .catch((err) => console.log(err));
+    }
+  }, [trigger]);
 
-    axios
-      .get("/user", config)
-      .then((res) => {this.setUser(res.data);console.log("test2")})
-      .catch((err) => console.log("application err"));
-    console.log("test3")
-  }
-
-  setUser = (user) => {
-    this.setState({user: user})
-  }
-
-
-  render (){
-    console.log("test4")
-    return (
-      <BrowserRouter>
-        <div className="App">
-          <Navbar user={this.state.user} setUser={this.setUser}></Navbar>
+  return (
+    <BrowserRouter>
+      <div className="App">
+        <Navbar2 userRole={userRole} setUserRole={setUserRole} setUser={setUser} ></Navbar2>
+        <div>
           <div>
-            <div>
-                <Switch>
-                  <Route exact path="/" component={() => <Home user={this.state.user}/>}></Route>
-                  <Route path="/login" component={() => <Login setUser={this.setUser}/>}></Route>
-                  <Route path="/signup" component={SignUp}></Route>
-                  <Route path="/forgot" component={Forgot}></Route>
-                </Switch>
-            </div>
+            <Switch>
+              <Route
+                exact
+                path="/"
+                component={() => <LandingPage />}
+              ></Route>
+              <Route path="/home" component={() => <HomePage user={user} />}></Route>
+              <Route path="/admin" component={() => <AdminPage />}></Route>
+              <Route
+                path="/login"
+                component={() => (
+                  <LoginPage setTrigger={setTrigger} setUser={setUser} />
+                )}
+              ></Route>
+              <Route path="/signup" component={() => <SignUpPage />}></Route>
+              <Route path="/profile" component={() => <Profile />}></Route>
+            </Switch>
           </div>
         </div>
-      </BrowserRouter>
-    );
-  }
-  
+      </div>
+    </BrowserRouter>
+  );
 }
+
+export default App;

@@ -1,0 +1,73 @@
+
+.navbar {
+  background-color: var(--myDarkBlue);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  z-index: 20;
+  margin-bottom: 20px;
+  position: fixed;
+}
+
+.navbarCollapse {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: right !important;
+    flex-grow: 0 !important;
+    
+}
+
+.navbarBrand {
+  color: var(--myWhite) !important;
+  font-weight: normal;
+  font-size: 2em !important;
+  font-family: fantasy;
+  font-style: oblique;
+}
+
+.button {
+  margin-left: 3px !important;
+  margin-right: 3px !important;
+  width: 100px;
+  /* background-color: var(--myRed) !important; */
+}
+
+.button2 {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    width: 120px;
+    background-color: var(--myYellow) !important;
+  }
+
+.dropdownItem:hover {
+}
+
+
+
+.dropdownItem:active {
+  background-color: rgb(240, 140, 60) !important;
+}
+
+.dropdownToggle {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* .dropdownToggle button:focus {
+    background-color: red !important;
+    border: none;
+    box-shadow: none;
+} */
+
+.dropdownToggle button {
+  width: 120px !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .button {
+    width: 99%;
+    margin-top: 10px;
+  }
+  .dropdownToggle button {
+    width: 99% !important;
+  }
+}
