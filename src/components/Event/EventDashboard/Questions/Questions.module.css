@@ -1,0 +1,115 @@
+.titleBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin: 15px 10px;
+}
+
+.askQuestionButton {
+  padding: 10px 25px;
+}
+
+.hr {
+  margin: 10px 10px;
+  margin-bottom: 30px;
+  opacity: 0.15 !important;
+}
+
+.root {
+  margin-top: 40px;
+}
+
+.questionAnswerBox {
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.cardContent {
+  padding: 20px;
+  margin: auto 30px;
+  margin-bottom: 5px;
+  display: flex !important;
+  flex-direction: row;
+  background-color: var(--myWhiteLight) !important;
+  border-radius: 30px !important;
+}
+
+
+.cardContentAnswer {
+    padding: 20px;
+    margin: auto 30px;
+    display: flex !important;
+    flex-direction: row;
+    border-radius: 30px !important;
+    /* background-color: var(--myWhite) !important; */
+    background-color: whitesmoke;
+  }
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.username {
+  opacity: 0.7;
+  font-size: 0.95em;
+}
+
+
+.cardSubTitle {
+    opacity: 0.9;
+}
+
+.myForm {
+  padding: 30px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: var(--myWhiteHover);
+}
+
+.myFormAnswer {
+  padding: 30px;
+  padding-bottom: 20px;
+  margin: 30px;
+  border-radius: 10px;
+  background-color: var(--myWhiteHover);
+}
+
+.inputContainer {
+  width: 100%;
+  padding: 0;
+  margin-top: 0;
+}
+
+.inputTextArea {
+  height: 200px !important;
+  resize: none;
+  border: 2px solid lightgray !important;
+  box-shadow: none !important;
+  padding: 10px 30px !important;
+  margin-bottom: 10px;
+}
+
+.inputTextArea:focus {
+  outline: none !important;
+}
+
+.buttonPosition {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  
+}
+.sendButton {
+  font-size: 1.05rem !important;
+  font-weight: bold !important;
+}

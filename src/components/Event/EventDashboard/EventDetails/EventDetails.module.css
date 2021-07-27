@@ -1,0 +1,15 @@
+.board {
+    margin-top: 15px ;
+    margin-bottom: 15px ;
+}
+
+.image{
+    width: 80%;
+    margin-bottom: 40px ;
+    box-shadow: 2px 2px 2px var(--myDarkBlue);
+    border-radius: 10px;
+}
+
+.details {
+    margin-bottom: 40px;
+}

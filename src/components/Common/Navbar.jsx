@@ -36,12 +36,47 @@ export default function Navbar2(props) {
   const goHome = () => {
     if (!props.userRole) {
       return "/";
-    } 
-    else if (props.userRole === "admin") {
-      return "/home"
-    } 
-    else if (props.userRole === "user") {
-      return "/home"
+    } else if (props.userRole === "admin") {
+      return "/home";
+    } else if (props.userRole === "user") {
+      return "/home";
+    }
+  };
+
+  const eventButtons = () => {
+    if (!props.userRole) {
+      return;
+    } else if (props.userRole === "admin") {
+      return (
+        <>
+          <Link to={"/addEvent"}>
+            <NavItem>
+              <Button color="light" className={styles.button3}>
+                <i class="fa fa-plus" aria-hidden="true"></i> Add New Event
+              </Button>
+            </NavItem>
+          </Link>
+          <Link to={"/myEvents"}>
+            <NavItem>
+              <Button color="light" className={styles.button3}>
+                <i class="fa fa-list" aria-hidden="true"></i> My Events
+              </Button>
+            </NavItem>
+          </Link>
+        </>
+      );
+    } else if (props.userRole === "user") {
+      return (
+        <>
+          <Link to={"/myEvents"}>
+            <NavItem>
+              <Button color="light" className={styles.button3}>
+                <i class="fa fa-list" aria-hidden="true"></i> My Events
+              </Button>
+            </NavItem>
+          </Link>
+        </>
+      );
     }
   };
 
@@ -49,35 +84,6 @@ export default function Navbar2(props) {
     if (!localStorage.getItem("token")) {
       return (
         <Nav navbar>
-          {/* <UncontrolledDropdown
-            nav
-            inNavbar
-            className={styles.uncontrolledDropdown}
-          >
-            <DropdownToggle nav className={styles.dropdownToggle}>
-              <Button color="light" className={styles.button}>
-                <i className="fa fa-user" aria-hidden="true"></i> Profile{" "}
-                <i className="fa fa-caret-down" aria-hidden="true"></i>
-              </Button>
-            </DropdownToggle>
-            <DropdownMenu right>
-              <DropdownItem className={styles.dropdownItem}>
-                <i className="fa fa-plus" aria-hidden="true"></i> Add Events
-              </DropdownItem>
-              <DropdownItem className={styles.dropdownItem}>
-                <i className="fa fa-calendar" aria-hidden="true"></i> My
-                Events
-              </DropdownItem>
-              <DropdownItem className={styles.dropdownItem}>
-                <i className="fa fa-cog" aria-hidden="true"></i> Profile
-                Settings
-              </DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem className={styles.dropdownItem}>
-                <i className="fa fa-sign-out" aria-hidden="true"></i> Log Out
-              </DropdownItem>
-            </DropdownMenu>
-          </UncontrolledDropdown> */}
           <Link to={"/Login"}>
             <NavItem>
               <Button color="light" className={styles.button}>
@@ -97,17 +103,18 @@ export default function Navbar2(props) {
     } else {
       return (
         <Nav navbar>
-          <Link to={"/Login"}>
+          {eventButtons()}
+          <Link to={"/profile"}>
             <NavItem>
               <Button color="light" className={styles.button2}>
-                <i class="fa fa-user" aria-hidden="true"></i> My Profile
+                <i className="fa fa-user" aria-hidden="true"></i> My Profile
               </Button>
             </NavItem>
           </Link>
           <Link to={"/"} onClick={handleLogout}>
             <NavItem>
               <Button color="light" className={styles.button}>
-                <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+                <i className="fa fa-sign-out" aria-hidden="true"></i> Logout
               </Button>
             </NavItem>
           </Link>
@@ -116,41 +123,8 @@ export default function Navbar2(props) {
     }
   };
 
-  // let buttons;
-  // if (localStorage.getItem("token")) {
-  //   buttons = (
-  //     <ul>
-  //       <li>
-  //         <Link to={"/"} onClick={handleLogout}>
-  //           Logout
-  //         </Link>
-  //       </li>
-  //     </ul>
-  //   );
-  // } else {
-  //   buttons = (
-  //     <ul>
-  //       <li>
-  //         <Link to={"/login"}>Login</Link>
-  //       </li>
-  //       <li>
-  //         <Link to={"/signup"}>Sign Up</Link>
-  //       </li>
-  //     </ul>
-  //   );
-  // }
-
   return (
-    // <div>
-    //   <nav>
-    //     <div>
-    //       {goHome()}
-    //       <div>{buttons}</div>
-    //     </div>
-    //   </nav>
-    // </div>
-
-    <Navbar className={styles.navbar} light navbar-fixed-top expand="md">
+    <Navbar className={styles.navbar} light expand="md">
       <Container>
         <NavbarBrand className={styles.navbarBrand} href={goHome()}>
           EventFinder

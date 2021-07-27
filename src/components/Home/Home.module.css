@@ -1,0 +1,108 @@
+.root {
+  margin-top: 40px;
+}
+.cardContent {
+  padding: 20px;
+  height: 500px;
+  margin: auto 30px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: var(--myWhite) !important; */
+}
+
+.organizer {
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quota {
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+.platformName {
+  margin-bottom: 15px !important;
+  background-color: var(--myGray);
+  padding: 5px;
+}
+.linkButton {
+  color: white !important;
+  background-color: var(--myRed) !important ;
+  font-size: 1.05rem !important;
+  text-transform: capitalize !important;
+}
+
+.linkButton:hover {
+  background-color: var(--myRedHover) !important ;
+}
+
+.addButton {
+  background-color: var(--myRed) !important;
+  color: white !important;
+  margin: 0 2% !important;
+  font-size: 1.05rem !important;
+  font-weight: bold !important;
+}
+
+.addButton:hover {
+  background-color: #b60020 !important;
+}
+
+.sendButton {
+  background-color: var(--myRed) !important;
+  color: white !important;
+  font-size: 1.05rem !important;
+  font-weight: bold !important;
+}
+
+.sendButton:hover {
+  background-color: #b60020 !important;
+}
+
+.formArea {
+  width: 100%;
+  padding: 0 2%;
+  margin-bottom: 20px;
+}
+
+.commentArea {
+  margin: 0;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.collapse {
+  width: 100%;
+}
+
+.inputArea {
+  box-shadow: none !important;
+}
+
+.inputArea:focus {
+  outline: none !important;
+}
+
+.inputTextArea {
+  height: 150px !important;
+  resize: none;
+  box-shadow: none !important;
+  padding: 10px 30px !important;
+}
+
+.inputTextArea:focus {
+  outline: none !important;
+}

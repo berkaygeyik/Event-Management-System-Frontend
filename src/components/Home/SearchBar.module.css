@@ -1,0 +1,82 @@
+@import url('https://css.gg/chevron-down.css');
+
+.allSearch {
+    background-color: var(--myWhite);
+    margin-bottom: 0px;
+    padding-top: 100px;
+    padding-bottom: 0px;
+    /* border-radius: 20px; */
+    
+}
+
+.form {
+    width: 100% !important;
+    background-color: var(--myWhite);
+}
+
+.formGroup {
+    width: 100% !important;
+}
+
+
+.label {
+    font-size: 2.25em;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.input {
+    font-size: 1.1em;
+    width: 100% !important;
+}
+
+.centerSearch {
+    margin: 0 20%;
+
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 1.3em !important;
+    font-weight: bold;
+    background-color: var(--myYellow);
+    color: black;
+    margin: 0 35%;
+    margin-top: 30px;
+    padding: 10px 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.label {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+/* 
+.toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.toggleButton {
+    background-color: var(--myGray) !important;
+    color: black !important;
+    display: flex !important;
+    flex-direction: row ;
+    justify-content: center;
+}
+
+.filterBoard {
+    margin-top: 5px;
+    margin-left: 25% !important;
+    margin-right: 25% !important;
+    padding: 10px;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 5px;
+} */

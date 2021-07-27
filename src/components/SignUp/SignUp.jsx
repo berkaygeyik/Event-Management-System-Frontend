@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { ValidationForm, TextInput } from "react-bootstrap4-form-validation";
 import {
@@ -25,13 +25,41 @@ export default function SignUp(props) {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [imageURL, setImageURL] = useState("");
   const [userType, setUserType] = useState("user");
 
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState("");
 
+  useEffect(() => {
+    const config = {
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem("token"),
+      },
+    };
+    if (props.user && props.update) {
+      axios
+        .get(`/user/profile/${props.user}`, config)
+        .then((res) => {
+          setName(res.data.name);
+          setSurname(res.data.surname);
+          setEmail(res.data.email);
+          setTcIdentificationNumber(res.data.tcIdentificationNumber);
+          setUsername(res.data.username);
+          setPassword(res.data.password);
+          setImageURL(res.data.imageURL);
+          setUserType(res.data.userType);
+        })
+        .catch((err) => console.log(err));
+    }
+  }, [props.user, props.update]);
+
   const [visible, setVisible] = useState(true);
   const onDismiss = () => setVisible(false);
+
+  const getFileName = (fullPath) => {
+    return fullPath.replace(/^.*[\\\/]/, "");
+  };
 
   const emptyCheck = () => {
     let check = 0;
@@ -51,38 +79,69 @@ export default function SignUp(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (emptyCheck()) {
-      const data = {
-        name: name,
-        surname: surname,
-        tcIdentificationNumber: tcIdentificationNumber,
-        email: email,
-        username: username,
-        password: password,
-      };
-      console.log(userType);
-      axios
-        .post(`/register/${userType}`, data)
-        .then((res) => {
-          setMessage(res.data);
-          setSubmitted(true);
-          if (res.data.messageType === "SUCCESS") {
-            history.push("/login");
-          }
-        })
-        .catch((err) => {
-          setSubmitted(true);
-          console.log(err);
-        });
-
-      setName("");
-      setSurname("");
-      setTcIdentificationNumber("");
-      setEmail("");
-      setUsername("");
-      setPassword("");
+    if (props.update) {
+      if (emptyCheck()) {
+        const data = {
+          name: name,
+          surname: surname,
+          tcIdentificationNumber: tcIdentificationNumber,
+          email: email,
+          username: username,
+          password: "fakepasswordforcheck",
+          imageURL: getFileName(imageURL),
+        };
+        console.log(data);
+        axios
+          .put(`/user/updateProfile/${props.user}`, data)
+          .then((res) => {
+            setMessage(res.data);
+            setSubmitted(true);
+            
+            if (res.data.messageType === "SUCCESS") {
+              // history.push("/login");
+            }
+          })
+          .catch((err) => {
+            setSubmitted(true);
+            console.log(err);
+          });
+      }
     } else {
-      console.log("You have to fill in all fields!");
+      if (emptyCheck()) {
+        const data = {
+          name: name,
+          surname: surname,
+          tcIdentificationNumber: tcIdentificationNumber,
+          email: email,
+          username: username,
+          password: password,
+          imageURL: getFileName(imageURL),
+          userType: userType,
+        };
+        console.log(userType);
+        axios
+          .post(`/register/${userType}`, data)
+          .then((res) => {
+            setMessage(res.data);
+            setSubmitted(true);
+            if (res.data.messageType === "SUCCESS") {
+              history.push("/login");
+            }
+          })
+          .catch((err) => {
+            setSubmitted(true);
+            console.log(err);
+          });
+
+        setName("");
+        setSurname("");
+        setTcIdentificationNumber("");
+        setEmail("");
+        setUsername("");
+        setPassword("");
+      } else {
+        console.log("You have to fill in all fields!");
+      }
     }
   };
 
@@ -104,6 +163,71 @@ export default function SignUp(props) {
     }
   };
 
+  const title = () => {
+    if(props.update){
+      return <CardTitle tag="h2">Update Profile</CardTitle>
+    }
+    else{
+      return <CardTitle tag="h2">Sign Up</CardTitle>
+    }
+  }
+  const button = () => {
+    if (props.update) {
+      return <Button className={styles.button}>Update Profile</Button>;
+    } else {
+      return <Button className={styles.button}>Sign Up</Button>;
+    }
+  };
+
+  const passwordInput = () => {
+    if (!props.update) {
+      return (
+        <div className={styles.inputContainer}>
+          <TextInput
+            type="password"
+            id="password"
+            name="password"
+            className="form-control"
+            placeholder="Password"
+            value={password}
+            minLength="8"
+            maxLength="32"
+            required
+            errorMessage={{
+              minLength: "Please enter at least 8 characters!",
+            }}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+      );
+    }
+  };
+
+  const roleInput = () => {
+    if (!props.update) {
+      return (
+        <div>
+          <Label for="password" className={styles.icon}>
+            Register as a User or an Admin.
+          </Label>
+          <div className={styles.inputContainer}>
+            <Input
+              type="select"
+              name="select"
+              id="select"
+              className="form-control"
+              placeholder="User Type"
+              onChange={(e) => setUserType(e.target.value)}
+            >
+              <option>user</option>
+              <option>admin</option>
+            </Input>
+          </div>
+        </div>
+      );
+    }
+  };
+
   return (
     <Container className={styles.box}>
       <div className={styles.mainbox}>
@@ -114,7 +238,7 @@ export default function SignUp(props) {
             src="/user.png"
             alt="User Icon"
           />
-          <CardTitle tag="h2">Sign Up</CardTitle>
+          {title()}
           <hr className={styles.hr}></hr>
           <ValidationForm className={styles.myForm} onSubmit={handleSubmit}>
             <div className={styles.inputGroup}>
@@ -229,47 +353,24 @@ export default function SignUp(props) {
               {/* <Label for="password" className={styles.icon}>
               Password
             </Label> */}
-              <div className={styles.inputContainer}>
-                <TextInput
-                  type="password"
-                  id="password"
-                  name="password"
-                  className="form-control"
-                  placeholder="Password"
-                  value={password}
-                  minLength="8"
-                  maxLength="32"
-                  required
-                  errorMessage={{
-                    minLength: "Please enter at least 8 characters!",
-                  }}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-              </div>
+              {passwordInput()}
             </div>
 
-            <Label for="password" className={styles.icon}>
-              Register as a User or an Admin.
-            </Label>
             <div className={styles.inputContainer}>
-              <Input
-                type="select"
-                name="select"
-                id="select"
+              <TextInput
+                type="file"
+                id="image"
+                name="image"
                 className="form-control"
-                placeholder="User Type"
-                onChange={(e) => setUserType(e.target.value)}
-              >
-                <option>user</option>
-                <option>admin</option>
-              </Input>
+                placeholder="Image"
+                onChange={(e) => {
+                  setImageURL(e.target.value);
+                }}
+              />
             </div>
-
-            <Button className={styles.button}>SignUp</Button>
+            {roleInput()}
+            {button()}
             {showAlert()}
-            {/* <div >
-              <Link to="/forgot">Forgot Password?</Link>
-            </div> */}
           </ValidationForm>
         </Card>
       </div>

@@ -1,0 +1,11 @@
+.panel {
+    margin: 0 1%;
+    width: 100%;
+}
+
+.title {
+    font-weight: bold;
+    width: 100%;
+    background-color: var(--myGray);
+    padding: 10px 0 !important;
+}

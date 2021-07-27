@@ -1,0 +1,14 @@
+.bar {
+  align-items: center;
+  width: 84.4%;
+}
+
+.title {
+  margin: 15px 10px;
+}
+
+.hr {
+  margin: 10px 10px;
+  margin-bottom: 30px;
+  opacity: 0.15 !important;
+}

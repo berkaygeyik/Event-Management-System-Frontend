@@ -1,0 +1,28 @@
+.root {
+  margin-top: 40px;
+}
+
+.title {
+    margin: 15px 30px;
+}
+
+.cardContent {
+  padding: 20px;
+  height: 300px;
+  margin: auto 30px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background-color: var(--myWhite) !important; */
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.username {
+  opacity: 0.7;
+  font-size: 0.95em;
+}

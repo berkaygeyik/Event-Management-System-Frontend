@@ -1,5 +1,4 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   Grid,
   Card,
@@ -19,80 +18,13 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
-import styles from "./Home.module.css";
-import searchBarStyles from "./SearchBar.module.css";
+import styles from "./MyEvents.module.css";
 
 const defaultImage =
   "https://media-exp3.licdn.com/dms/image/C4D1BAQFAC3o2eHS_vA/company-background_10000/0/1565182814457?e=2159024400&v=beta&t=zWT-JPXEhmCFr0L8eTn0LswSz82VWuuJBkRuPAvLN-Q";
 
-export default function Home(props) {
-  // if (props.user) {
-  //   return <h2> {props.user} </h2>;
-  // }
-  const [user, setUser] = useState("");
-  const [userRole, setUserRole] = useState("");
-  const [eventList, setEventList] = useState("");
-  const [searchInputValue, setSearchInputValue] = useState("");
-
-  useEffect(() => {
-    const config = {
-      headers: {
-        Authorization: "Bearer " + localStorage.getItem("token"),
-      },
-    };
-    setUser(localStorage.getItem("username"));
-    setUserRole(localStorage.getItem("userRole"));
-
-    axios
-      .get(`/user/events`, config)
-      .then((res) => {
-        //console.log(res.data);
-        setEventList(res.data);
-      })
-      .catch((err) => console.log(err));
-
-    //console.log(user, userRole);
-  }, []);
-
-  
-
-  const editSearchInput = (event) => {
-    setSearchInputValue(event.target.value);
-  };
-
-  const searchBar = () => {
-
-
-    return (
-      <div>
-        <Form className={searchBarStyles.form}>
-          <FormGroup className={searchBarStyles.formGroup}>
-            <Label className={searchBarStyles.label} for="text">
-              <i className="fa fa-search" aria-hidden="true"></i>&nbsp; Search
-              Clubs
-            </Label>
-            <Input
-              onChange={(subclub) => editSearchInput(subclub)}
-              className={searchBarStyles.input}
-              type="text"
-              name="text"
-              id="text"
-              placeholder="Enter a search key..."
-            />
-          </FormGroup>
-        </Form>
-      </div>
-    );
-  };
-
-  const searchCheck = (event, index) => {
-    if (
-      searchInputValue !== "" &&
-      event.name.toLowerCase().indexOf(searchInputValue.toLowerCase()) === -1
-    ) {
-      return null;
-    }
-
+export default function MyEvents(props) {
+  const showEvents = (event, index) => {
     return (
       <div className="col-12 col-sm-12 col-md-6 col-xl-4 mb-5" key={index}>
         <Card className={styles.cardContent}>
@@ -154,7 +86,10 @@ export default function Home(props) {
               <i className="fa fa-map-marker" aria-hidden="true"></i>{" "}
               {event.location}
             </CardSubtitle>
-            <Link style={{ textDecoration:"none" }} to={`/event/${event.name}`}>
+            <Link
+              style={{ textDecoration: "none" }}
+              to={`/event/${event.name}`}
+            >
               <Button
                 href={event.eventLink}
                 target="_blank"
@@ -172,28 +107,17 @@ export default function Home(props) {
     );
   };
 
-  if (!eventList) {
-    return null;
-  }
-
-  if (!props.getDate()){
-    return null;
+  if (!props.user || !props.userRole || !props.eventList || !props.getDate) {
+    return <div></div>;
   }
 
   return (
     <div>
-      <div className={searchBarStyles.allSearch}>
-        <div className={searchBarStyles.centerSearch}>{searchBar()}</div>
-
-        <div className={searchBarStyles.title}>All Events</div>
-      </div>
-
-      {/* <Row className={styles.rowDashboard}>
-        {eventList.map((event) => eventCard(event.name, event))}
-      </Row> */}
       <Container className={styles.root}>
+        <h2 className={styles.title}>My Created Events</h2>
+        <hr className={styles.hr}/>
         <Grid container spacing={0} item xs={12}>
-          {eventList.map((event, index) => searchCheck(event, index))}
+          {props.eventList.map((event, index) => showEvents(event, index))}
         </Grid>
       </Container>
     </div>

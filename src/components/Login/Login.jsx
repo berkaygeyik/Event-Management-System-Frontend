@@ -75,7 +75,7 @@ export default function Login(props) {
           <hr className={styles.hr}></hr>
           <ValidationForm className={styles.myForm} onSubmit={handleSubmit}>
             <Label for="username" className={styles.icon}>
-              <i class="fa fa-user icon"></i> Username
+              <i className="fa fa-user icon"></i> Username
             </Label>
             <div className={styles.inputContainer}>
               <TextInput
@@ -95,7 +95,7 @@ export default function Login(props) {
               />
             </div>
             <Label for="password" className={styles.icon}>
-              <i class="fa fa-unlock-alt"></i> Password
+              <i className="fa fa-unlock-alt"></i> Password
             </Label>
             <div  className={styles.inputContainer}>
               <TextInput
