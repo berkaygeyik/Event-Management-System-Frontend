@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Footer from "../Footer/Footer";
 import EnrollmentChart from "../MyEvents/EnrollmentChart/EnrollmentChart";
 import InfoBox from "../MyEvents/InfoBox/InfoBox";
 import MyEvents from "../MyEvents/MyEvents";

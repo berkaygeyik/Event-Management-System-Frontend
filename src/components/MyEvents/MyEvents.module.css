@@ -16,9 +16,9 @@
 
 .cardContent {
   padding: 20px;
-  height: 500px;
   margin: auto 30px;
   display: flex !important;
+  height: 570px;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -60,4 +60,13 @@
 
 .linkButton:hover {
   background-color: var(--myRedHover) !important ;
+}
+
+.image {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
 }

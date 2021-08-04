@@ -3,21 +3,14 @@ import axios from "axios";
 import { ValidationForm, TextInput } from "react-bootstrap4-form-validation";
 import { Link, Redirect } from "react-router-dom";
 import styles from "./Login.module.css";
-import {
-  Button,
-  Card,
-  CardTitle,
-  Container,
-  FormGroup,
-  Input,
-  Label,
-  CardImg,
-} from "reactstrap";
+import { Button, Card, CardTitle, Container, FormGroup, Input, Label, CardImg } from "reactstrap";
+import Alert from "@material-ui/lab/Alert";
 
 export default function Login(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState();
+  const [alert, setAlert] = useState(false);
 
   const emptyCheck = () => {
     let check = 0;
@@ -45,7 +38,10 @@ export default function Login(props) {
             props.setUser(username);
             props.setTrigger(res.data.token);
           } else {
-            console.log("Login failed!");
+            setAlert(true);
+            setTimeout(() => {
+              setAlert(false);
+            }, 2000);
           }
           setUsername("");
           setPassword("");
@@ -65,12 +61,7 @@ export default function Login(props) {
     <Container className={styles.box}>
       <div className={styles.mainbox}>
         <Card body className={styles.card}>
-          <CardImg
-            top
-            className={styles.cardImage}
-            src="/user.png"
-            alt="User Icon"
-          />
+          <CardImg top className={styles.cardImage} src="/user.png" alt="User Icon" />
           <CardTitle tag="h2">Login</CardTitle>
           <hr className={styles.hr}></hr>
           <ValidationForm className={styles.myForm} onSubmit={handleSubmit}>
@@ -97,7 +88,7 @@ export default function Login(props) {
             <Label for="password" className={styles.icon}>
               <i className="fa fa-unlock-alt"></i> Password
             </Label>
-            <div  className={styles.inputContainer}>
+            <div className={styles.inputContainer}>
               <TextInput
                 type="password"
                 id="password"
@@ -120,13 +111,14 @@ export default function Login(props) {
               </Label>
             </FormGroup>
             <Button className={styles.button}>Login</Button>
-            {/* <div >
-              <Link to="/forgot">Forgot Password?</Link>
-            </div> */}
+            {alert ? (
+              <Alert style={{ marginTop: "10px" }} severity="error">
+                Username or Password is wrong
+              </Alert>
+            ) : null}
           </ValidationForm>
         </Card>
       </div>
     </Container>
-    
   );
 }

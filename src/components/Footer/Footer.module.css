@@ -1,0 +1,30 @@
+.footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 70px;
+    color: white;
+    background-color: rgb(50, 50, 50);
+}
+
+.footerTop {
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+}
+
+.footerTopBrand {
+    color: white !important;
+    font-weight: normal;
+    font-size: 2em !important;
+    font-family: fantasy;
+    font-style: oblique;
+} 
+
+.footerTopRight {
+    margin: 5px;
+}
+
+.footerBottomHead {
+    color: rgb(240, 140, 60);
+    font-size: 1.5em;
+}

@@ -25,6 +25,14 @@
   flex-direction: row;
   margin-bottom: 0 !important;
 }
+
+.titleButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .detailButton {
   background-color: var(--myGreen) !important;
   color: white !important;
@@ -35,3 +43,18 @@
 .detailButton:hover {
   background-color: var(--myGreenHover) !important;
 }
+
+.giftDrawButton {
+  background-color: var(--myRed) !important;
+  color: white !important;
+  padding: 8px 20px;
+  text-transform: capitalize !important;
+  margin-left: 10px !important;
+}
+
+.giftDrawButton:hover {
+  background-color: var(--myRedHover) !important;
+  
+}
+
+

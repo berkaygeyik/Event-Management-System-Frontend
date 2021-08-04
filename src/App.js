@@ -2,7 +2,6 @@ import React, { Component, useState, useEffect } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import axios from "axios";
-import Forgot from "./components/Forgot";
 import LandingPage from "./components/Root/LandingPage";
 import HomePage from "./components/Root/HomePage";
 import AdminPage from "./components/Root/AdminPage";
@@ -14,11 +13,12 @@ import Navbar2 from "./components/Common/Navbar";
 import styles from "./App.module.css";
 import Profile from "./components/Root/Profile";
 import AddEventPage from "./components/Root/AddEventPage";
+import EventQuestionsPage from "./components/Root/EventQuestionsPage";
+import Footer from "./components/Footer/Footer";
 function App() {
   const [user, setUser] = useState("");
   const [userRole, setUserRole] = useState("");
   const [userNameSurname, setUserNameSurname] = useState("");
-  const [userData, setUserData] = useState("");
   const [trigger, setTrigger] = useState("");
 
   useEffect(() => {
@@ -35,11 +35,7 @@ function App() {
           setUserRole(res.data.userRole);
           setUserNameSurname(res.data.name + " " + res.data.surname);
           localStorage.setItem("userRole", res.data.userRole);
-          localStorage.setItem(
-            "userNameSurname",
-            res.data.name + " " + res.data.surname
-          );
-          
+          localStorage.setItem("userNameSurname", res.data.name + " " + res.data.surname);
         })
         .catch((err) => console.log(err));
     }
@@ -69,25 +65,37 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Navbar2
-          userRole={userRole}
-          setUserRole={setUserRole}
-          setUser={setUser}
-        ></Navbar2>
+        <Navbar2 userRole={userRole} setUserRole={setUserRole} setUser={setUser}></Navbar2>
         <div>
           <div>
             <Switch>
               <Route exact path="/" component={() => <LandingPage />}></Route>
               <Route path="/home" component={() => <HomePage getDate={getDate} user={user} />}></Route>
-              <Route path="/admin" component={() => <AdminPage />}></Route>
-              <Route path="/myEvents" component={() => ( <MyEventsPage getDate={getDate} user={user} userRole={userRole}/>)}/>
-              <Route path="/login" component={() => ( <LoginPage setTrigger={setTrigger} setUser={setUser} />)} ></Route>
+              <Route
+                path="/myEvents"
+                component={() => <MyEventsPage getDate={getDate} user={user} userRole={userRole} />}
+              />
+              <Route path="/login" component={() => <LoginPage setTrigger={setTrigger} setUser={setUser} />}></Route>
               <Route path="/signup" component={() => <SignUpPage />}></Route>
-              <Route path="/updateUser" component={() => <SignUpPage  user={user} setUser={setUser} update={true} userRole={userRole} />}></Route>
+              <Route
+                path="/updateUser"
+                component={() => <SignUpPage user={user} setUser={setUser} update={true} userRole={userRole} />}
+              ></Route>
               <Route path="/profile" component={() => <Profile />}></Route>
-              <Route path="/addEvent" component={() => ( <AddEventPage user={user} userRole={userRole} /> )} ></Route>
-              <Route path="/event/:eventName" render={(props) => <EventPage getDate={getDate} {...props} />}/>
-              <Route path="/updateEvent/:eventName" render={(props) => (<AddEventPage user={user} update={true} userRole={userRole} {...props} />)}/>
+              {userRole === "admin" ? (
+                <Route path="/addEvent" component={() => <AddEventPage user={user} userRole={userRole} />}></Route>
+              ) : null}
+              <Route path="/event/:eventName" render={(props) => <EventPage getDate={getDate} {...props} />} />
+              <Route
+                path="/eventQuestions/:eventName"
+                render={(props) => <EventQuestionsPage getDate={getDate} {...props} />}
+              />
+              {userRole === "admin" ? (
+                <Route
+                  path="/updateEvent/:eventName"
+                  render={(props) => <AddEventPage user={user} update={true} userRole={userRole} {...props} />}
+                />
+              ) : null}
             </Switch>
           </div>
         </div>

@@ -1,0 +1,124 @@
+.titleBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin: 15px 10px;
+}
+
+.hr {
+  margin: 10px 10px;
+  margin-bottom: 30px;
+  opacity: 0.15 !important;
+}
+
+.askQuestionButton {
+  padding: 5px 20px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.myForm {
+  padding: 30px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: var(--myWhiteHover);
+}
+
+.inputContainer {
+  width: 100%;
+  padding: 0;
+  margin-top: 0;
+}
+
+.optionContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+
+.inputTextArea {
+  height: 200px !important;
+  resize: none;
+  border: 2px solid white !important;
+  box-shadow: none !important;
+  padding: 10px !important;
+  margin-bottom: 10px;
+}
+
+.inputTextArea:focus {
+  outline: none !important;
+}
+
+.optionText {
+  box-shadow: none !important;
+}
+
+.buttonPosition {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.sendButton {
+  font-size: 1.05rem !important;
+  font-weight: bold !important;
+}
+
+/* .sendQuestionButtonPosition {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+} */
+.sendQuestionButton {
+  font-size: 1.25rem !important;
+  font-weight: bold !important;
+  margin-bottom: 20px;
+}
+
+.label {
+  background-color: var(--myRed);
+  color: white !important;
+  font-size: 1.1em;
+  margin-bottom: 0;
+  border-radius: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.questionBox {
+  width: 100%;
+}
+
+.cardContent {
+  padding: 20px;
+  margin: auto 30px;
+  margin-bottom: 5px;
+  display: flex !important;
+  flex-direction: row;
+  background-color: var(--myWhiteLight) !important;
+  border-radius: 30px !important;
+}
+
+.showingOption {
+  opacity: 0.8 !important;
+}
+
+
+.pollBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid lightgray;
+  margin: 30px 0;
+  border-radius: 20px;
+}
+
+.table {
+  width: 80%;
+  margin: 10px 50px;
+}

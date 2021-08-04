@@ -11,6 +11,7 @@
 
 .askQuestionButton {
   padding: 10px 25px;
+  margin-left: 10px;
 }
 
 .hr {
@@ -64,7 +65,7 @@
 }
 
 
-.cardSubTitle {
+.showingOption {
     opacity: 0.9;
 }
 

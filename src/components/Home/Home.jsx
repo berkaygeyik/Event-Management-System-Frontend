@@ -22,8 +22,6 @@ import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
 import searchBarStyles from "./SearchBar.module.css";
 
-const defaultImage =
-  "https://media-exp3.licdn.com/dms/image/C4D1BAQFAC3o2eHS_vA/company-background_10000/0/1565182814457?e=2159024400&v=beta&t=zWT-JPXEhmCFr0L8eTn0LswSz82VWuuJBkRuPAvLN-Q";
 
 export default function Home(props) {
   // if (props.user) {
@@ -100,8 +98,9 @@ export default function Home(props) {
             <CardImg
               top
               width="100%"
-              src={defaultImage}
+              src={event.imageURL}
               alt="Card Image"
+              className={styles.image}
             ></CardImg>
             <CardTitle tag="h4">{event.name}</CardTitle>
             <CardSubtitle className={styles.organizer}>

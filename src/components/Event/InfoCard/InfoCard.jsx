@@ -3,6 +3,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { Button, Card, CardTitle, CardText } from "reactstrap";
+import EventRegistration from "../../EventQuestions/EventRegistration/EventRegistration";
 
 import styles from "./InfoCard.module.css";
 
@@ -11,12 +12,13 @@ export default function Infocard(props) {
 
   const [adminEvents, setAdminEvents] = useState();
   const [enrolledEvents, setEnrolledEvents] = useState();
-  const [isAdminOfThisEvent, setIsAdminOfThisEvent] = useState(false);
-  const [isUserEnrolledThisEvent, setIsUserEnrolledThisEvent] = useState(false);
+
   const [message, setMessage] = useState("");
-  const [deleteMessage, setDeleteMessage] = useState("");
   const [config, setConfig] = useState();
   const [alert, setAlert] = useState(false);
+  const [modal, setModal] = useState(false);
+
+  const modalToggle = () => setModal(!modal);
 
   useEffect(() => {
     const newConfig = {
@@ -44,7 +46,7 @@ export default function Infocard(props) {
       if (props.userRole === "admin") {
         for (let i = 0; i < adminEvents.length; i++) {
           if (adminEvents[i].name === props.event.name) {
-            setIsAdminOfThisEvent(true);
+            props.setIsAdminOfThisEvent(true);
             break;
           }
         }
@@ -55,7 +57,7 @@ export default function Infocard(props) {
       if (props.userRole === "user") {
         for (let i = 0; i < enrolledEvents.length; i++) {
           if (enrolledEvents[i].name === props.event.name) {
-            setIsUserEnrolledThisEvent(true);
+            props.setIsUserEnrolledThisEvent(true);
             break;
           }
         }
@@ -90,7 +92,7 @@ export default function Infocard(props) {
       .then((res) => {
         setMessage(res.data);
         if (res.data.messageType === "SUCCESS") {
-          setIsUserEnrolledThisEvent(true);
+          props.setIsUserEnrolledThisEvent(true);
         }
         setAlert(true);
         setTimeout(() => {
@@ -107,15 +109,16 @@ export default function Infocard(props) {
       username: props.user,
       userEmail: props.userData.email,
     };
+    console.log(data);
 
     axios
       .post(`/mail/send-qr-code`, data, config)
       .then((res) => {
-        setMessage(res.data);
-        console.log(res.data)
-        if (res.data.messageType === "SUCCESS") {
-          setIsUserEnrolledThisEvent(true);
-        }
+        console.log(res);
+        // setMessage(res.data);
+        // if (res.data.messageType === "SUCCESS") {
+
+        // }
         // setAlert(true);
         // setTimeout(() => {
         //   setAlert(false);
@@ -125,6 +128,7 @@ export default function Infocard(props) {
   };
 
   const joinButtonClick = () => {
+    setModal(true)
     join();
     sendEmail();
   };
@@ -135,7 +139,7 @@ export default function Infocard(props) {
       .then((res) => {
         setMessage(res.data);
         if (res.data.messageType === "SUCCESS") {
-          setIsUserEnrolledThisEvent(false);
+          props.setIsUserEnrolledThisEvent(false);
         }
         setAlert(true);
         setTimeout(() => {
@@ -147,36 +151,29 @@ export default function Infocard(props) {
 
   const cardButton = () => {
     if (props.userRole === "admin") {
-      if (isAdminOfThisEvent) {
+      if (props.isAdminOfThisEvent) {
         return (
           <>
-            <CardText style={{ marginBottom: "10px" }}>
-              You are Admin of this event. You can update or delete this event.
-            </CardText>
+            <CardText style={{ marginBottom: "10px" }}>You are Admin of this event. You can update or delete this event.</CardText>
             <div style={{ display: "flex", flexDirection: "row" }}>
               <Button
                 style={{ width: "100%", marginRight: "5px", outline: "none" }}
                 color="success"
-                onClick={() => history.push(`/updateEvent/${props.event.name}`)}
+                onClick={handleUpdate}
               >
                 <i className="fa fa-check" aria-hidden="true"></i> Update Event
               </Button>
-              <Button
-                style={{ width: "100%", marginLeft: "5px", outline: "none" }}
-                color="danger"
-                onClick={handleDelete}
-              >
+              <Button style={{ width: "100%", marginLeft: "5px", outline: "none" }} color="danger" onClick={handleDelete}>
                 <i className="fa fa-check" aria-hidden="true"></i> Delete Event
               </Button>
             </div>
+            {showAlert()}
           </>
         );
       } else {
         return (
           <>
-            <CardText style={{ marginBottom: "10px" }}>
-              You cannot join because you are an admin!
-            </CardText>
+            <CardText style={{ marginBottom: "10px" }}>You cannot join because you are an admin!</CardText>
             <Button disabled color="secondary" style={{ outline: "none" }}>
               <i className="fa fa-check" aria-hidden="true"></i> Join to Event
             </Button>
@@ -185,17 +182,11 @@ export default function Infocard(props) {
       }
     }
     if (props.userRole === "user") {
-      if (isUserEnrolledThisEvent) {
+      if (props.isUserEnrolledThisEvent) {
         return (
           <>
-            <CardText style={{ marginBottom: "10px" }}>
-              You joined to this event. Do you want to leave ?
-            </CardText>
-            <Button
-              color="danger"
-              style={{ outline: "none" }}
-              onClick={leaveButtonClick}
-            >
+            <CardText style={{ marginBottom: "10px" }}>You joined to this event. Do you want to leave ?</CardText>
+            <Button color="danger" style={{ outline: "none" }} onClick={leaveButtonClick}>
               <i className="fa fa-times" aria-hidden="true"></i> Leave
             </Button>
             {showAlert()}
@@ -204,28 +195,39 @@ export default function Infocard(props) {
       } else {
         return (
           <>
-            <CardText style={{ marginBottom: "10px" }}>
-              Do you want to join ?
-            </CardText>
-            <Button
-              color="success"
-              style={{ outline: "none" }}
-              onClick={joinButtonClick}
-            >
+            <CardText style={{ marginBottom: "10px" }}>Do you want to join ?</CardText>
+            <Button color="success" style={{ outline: "none" }} onClick={joinButtonClick}>
               <i className="fa fa-check" aria-hidden="true"></i> Join to Event
             </Button>
             {showAlert()}
+            
           </>
         );
       }
     }
   };
 
+  const handleUpdate = (e) => {
+    e.preventDefault()
+    if(new Date() > new Date(props.event.startDate)){
+      setMessage({message:"After the start date, the event cannot be updated.", messageType:"ERROR"})
+      setAlert(true);
+        setTimeout(() => {
+          setAlert(false);
+        }, 2000);
+    }
+    else{
+      history.push(`/updateEvent/${props.event.name}`)
+    }
+    
+  }
+
   const handleDelete = (e) => {
     e.preventDefault();
     axios
       .delete(`/admin/events/${props.event.name}`, config)
       .then((res) => {
+        console.log(res)
         if (res.data.messageType === "SUCCESS") {
           //history.push(`/event/${name}`);
           setAlert(true);
@@ -233,7 +235,9 @@ export default function Infocard(props) {
         }
         if (res.data.messageType === "ERROR") {
           //history.push(`/event/${name}`);
+          console.log(message)
           setAlert(true);
+          setMessage(res.data);
           setTimeout(() => {
             setMessage("");
             setAlert(false);
@@ -250,46 +254,27 @@ export default function Infocard(props) {
   const showCard = () => {
     return (
       <div style={{ marginTop: "100px" }}>
-        <Card
-          body
-          inverse
-          style={{ backgroundColor: "#333", borderColor: "#333" }}
-        >
-          <i
-            style={{ fontSize: "1.5em", opacity: "0.5" }}
-            className="fa fa-clock-o"
-            aria-hidden="true"
-          ></i>
+        <EventRegistration user={props.user} event={props.event} userRole={props.userRole} modal={modal} modalToggle={modalToggle}></EventRegistration>
+        <Card body inverse style={{ backgroundColor: "#333", borderColor: "#333" }}>
+          <i style={{ fontSize: "1.5em", opacity: "0.5" }} className="fa fa-clock-o" aria-hidden="true"></i>
           <CardText style={{ marginBottom: 0 }}>
-            <span className={styles.span}>Start Date: </span>{" "}
-            {props.getDate(props.event.startDate)}
+            <span className={styles.span}>Start Date: </span> {props.getDate(props.event.startDate)}
           </CardText>
           <CardText style={{ marginBottom: 0 }}>
-            <span className={styles.span}>End Date: </span>{" "}
-            {props.getDate(props.event.endDate)}
+            <span className={styles.span}>End Date: </span> {props.getDate(props.event.endDate)}
           </CardText>
           <hr className={styles.hr}></hr>
-          <i
-            style={{ fontSize: "1.5em", opacity: "0.5" }}
-            className="fa fa-map-marker"
-            aria-hidden="true"
-          ></i>
+          <i style={{ fontSize: "1.5em", opacity: "0.5" }} className="fa fa-map-marker" aria-hidden="true"></i>
           <CardText style={{ marginBottom: 0 }}>
-            <span className={styles.span}>Location: </span>{" "}
-            {props.event.location}
+            <span className={styles.span}>Location: </span> {props.event.location}
           </CardText>
           <CardText style={{ marginBottom: 0 }}>
             <span className={styles.span}>Address: </span> {props.event.address}
           </CardText>
           <hr className={styles.hr}></hr>
-          <i
-            style={{ fontSize: "1.5em", opacity: "0.5" }}
-            className="fa fa-question-circle-o"
-            aria-hidden="true"
-          ></i>
+          <i style={{ fontSize: "1.5em", opacity: "0.5" }} className="fa fa-question-circle-o" aria-hidden="true"></i>
           <CardText style={{ marginBottom: 0 }}>
-            <span className={styles.span}>Participants: </span>{" "}
-            {props.event.registeredUserCount}
+            <span className={styles.span}>Participants: </span> {props.event.registeredUserCount}
           </CardText>
           <CardText style={{ marginBottom: 0 }}>
             <span className={styles.span}>Quota: </span> {props.event.quota}

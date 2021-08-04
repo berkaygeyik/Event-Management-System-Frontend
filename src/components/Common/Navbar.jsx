@@ -104,10 +104,10 @@ export default function Navbar2(props) {
       return (
         <Nav navbar>
           {eventButtons()}
-          <Link to={"/profile"}>
+          <Link to={"/updateUser"}>
             <NavItem>
               <Button color="light" className={styles.button2}>
-                <i className="fa fa-user" aria-hidden="true"></i> My Profile
+                <i className="fa fa-user" aria-hidden="true"></i> Update Profile
               </Button>
             </NavItem>
           </Link>

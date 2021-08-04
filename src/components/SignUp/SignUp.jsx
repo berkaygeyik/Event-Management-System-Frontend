@@ -79,6 +79,11 @@ export default function SignUp(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const config = {
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem("token"),
+      },
+    };
     if (props.update) {
       if (emptyCheck()) {
         const data = {
@@ -92,7 +97,7 @@ export default function SignUp(props) {
         };
         console.log(data);
         axios
-          .put(`/user/updateProfile/${props.user}`, data)
+          .put(`/user/updateProfile/${props.user}`, data, config)
           .then((res) => {
             setMessage(res.data);
             setSubmitted(true);

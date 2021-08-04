@@ -1,17 +1,5 @@
 import React, { useState } from "react";
-import {
-  TabContent,
-  TabPane,
-  Nav,
-  NavItem,
-  NavLink,
-  Card,
-  Button,
-  CardTitle,
-  CardText,
-  Row,
-  Col,
-} from "reactstrap";
+import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from "reactstrap";
 
 import { StylesProvider } from "@material-ui/styles";
 import PropTypes from "prop-types";
@@ -36,13 +24,7 @@ function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
   return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`full-width-tabpanel-${index}`}
-      aria-labelledby={`full-width-tab-${index}`}
-      {...other}
-    >
+    <div role="tabpanel" hidden={value !== index} id={`full-width-tabpanel-${index}`} aria-labelledby={`full-width-tab-${index}`} {...other}>
       {value === index && (
         <Box p={3}>
           <Typography>{children}</Typography>
@@ -91,44 +73,35 @@ export default function FullWidthTabs(props) {
   }
 
   const participantsTab = () => {
-    if (props.userRole === "admin") {
+    if (props.userRole === "admin" && props.eventAdmin.username === props.user) {
       return <Tab label="Participants" {...a11yProps(3)} />;
     }
   };
 
   const statisticsTab = () => {
-    if (props.userRole === "admin") {
+    console.log(props.user, props.eventAdmin.username)
+    if (props.userRole === "admin" && props.eventAdmin.username === props.user) {
       return <Tab label="Statistics" {...a11yProps(4)} />;
     }
   };
   const questionsTab = () => {
+    if(props.userRole === "user" || props.eventAdmin.username === props.user){
       return <Tab label="Questions" {...a11yProps(2)} />;
+    }
   };
 
   return (
     <div className={classes.root}>
       <AppBar position="static" color="default">
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          indicatorColor="primary"
-          textColor="primary"
-          variant="fullWidth"
-          aria-label="full width tabs example"
-        >
+        <Tabs value={value} onChange={handleChange} indicatorColor="primary" textColor="primary" variant="fullWidth" aria-label="full width tabs example">
           <Tab label="Description" {...a11yProps(0)} />
           <Tab label="Location Map" {...a11yProps(1)} />
           {questionsTab()}
           {participantsTab()}
           {statisticsTab()}
-          
         </Tabs>
       </AppBar>
-      <SwipeableViews
-        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-        index={value}
-        onChangeIndex={handleChangeIndex}
-      >
+      <SwipeableViews axis={theme.direction === "rtl" ? "x-reverse" : "x"} index={value} onChangeIndex={handleChangeIndex}>
         <TabPanel value={value} index={0} dir={theme.direction}>
           <EventDetails event={props.event} />
         </TabPanel>
@@ -136,25 +109,14 @@ export default function FullWidthTabs(props) {
           {/* <LocationMap /> */}
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          <Questions
-            user={props.user}
-            userRole={props.userRole}
-            event={props.event}
-            eventAdmin={props.eventAdmin}
-          />
+          <Questions user={props.user} userRole={props.userRole} event={props.event} eventAdmin={props.eventAdmin} />
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
-          <Participants
-            user={props.user}
-            userRole={props.userRole}
-            getDate={props.getDate}
-            event={props.event}
-          />
+          <Participants user={props.user} userRole={props.userRole} getDate={props.getDate} event={props.event} />
         </TabPanel>
         <TabPanel value={value} index={4} dir={theme.direction}>
           <Statistics event={props.event} />
         </TabPanel>
-        
       </SwipeableViews>
     </div>
   );

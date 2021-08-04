@@ -42,7 +42,7 @@ export default function Participants(props) {
   const showParticipants = (participant, index) => {
     return (
       <div
-        className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-5"
+        className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4"
         key={index}
       >
         <Card className={styles.cardContent}>
@@ -50,9 +50,9 @@ export default function Participants(props) {
             <CardImg
               top
               width="100%"
-              src={defaultImage}
+              src={process.env.PUBLIC_URL + "/" + participant.imageURL}
               alt="Card Image"
-              style={{ width: "70%", marginBottom: "20px" }}
+              className={styles.image}
             ></CardImg>
             <CardTitle tag="h4">
               {participant.name} {participant.surname}

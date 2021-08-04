@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AddEvent from "../AddEvent/AddEvent";
 import InfoBox from "../AddEvent/InfoBox/InfoBox";
+import Footer from "../Footer/Footer";
 
 export default function AddEventPage(props) {
   if (!props.user || !props.userRole ) {
@@ -27,6 +28,7 @@ export default function AddEventPage(props) {
   return (
     <div >
       {propsMatch()}
+      <Footer></Footer>
     </div>
   );
 }
