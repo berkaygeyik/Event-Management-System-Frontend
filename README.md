@@ -68,3 +68,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Images
+
+![1](https://user-images.githubusercontent.com/61477332/128788570-34043314-4b43-4c40-b0b5-eead744f5f4b.png)
+![2](https://user-images.githubusercontent.com/61477332/128788579-6c34e3ed-c935-47f2-86a2-bfff431ce2f5.png)
+![3](https://user-images.githubusercontent.com/61477332/128788580-0a2320a1-e84b-456a-ae0a-d5f93988517b.png)
+![4](https://user-images.githubusercontent.com/61477332/128788582-a21ad09d-031c-4c09-8e44-ec42c52aa9a3.png)
+![5](https://user-images.githubusercontent.com/61477332/128788583-c3957ba7-1b34-453e-b0b4-93a9f7512bc1.png)
+![6](https://user-images.githubusercontent.com/61477332/128788584-ec7ea28f-7084-4d8e-ac4d-9f33d92ce0b2.png)
+![7](https://user-images.githubusercontent.com/61477332/128788587-0576c558-a095-4906-8b65-8efd05cc14f9.png)
+![8](https://user-images.githubusercontent.com/61477332/128788591-1b995d35-6539-4f32-9040-64549343f6ea.png)
+![9](https://user-images.githubusercontent.com/61477332/128788593-5097f801-6077-4b57-8cdf-e0e23d9fd758.png)
+![10](https://user-images.githubusercontent.com/61477332/128788594-f9255cbe-8a9d-417e-96fa-3a07f2063322.png)
+![11](https://user-images.githubusercontent.com/61477332/128788596-e19e6cd9-f426-4109-99ce-db62a336a372.png)
+![12](https://user-images.githubusercontent.com/61477332/128788597-0b954442-6efa-4857-8dc7-80f967be885b.png)
+![13](https://user-images.githubusercontent.com/61477332/128788600-8787a17d-2d54-4b73-9e2e-b48388e8ad55.png)
+![14](https://user-images.githubusercontent.com/61477332/128788601-170dfabf-c81c-4f78-b1d1-87d95c5df046.png)
+![15](https://user-images.githubusercontent.com/61477332/128788602-aec82212-ee10-4e06-a389-76c1dff5bfb4.png)
+![16](https://user-images.githubusercontent.com/61477332/128788603-3d85c77d-2165-46e9-b010-caa0eac306f1.png)
+![17](https://user-images.githubusercontent.com/61477332/128788604-e847b6cf-aad1-43f1-9c16-e2113868dc6e.png)
